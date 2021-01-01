@@ -12,7 +12,7 @@
 Pong::Pong() :
     m_window(NULL), m_renderer(NULL), m_texture(NULL), m_surface(NULL),
     m_left_paddle(Paddle::Side::LEFT), m_right_paddle(Paddle::Side::RIGHT), m_ball(),
-    m_scoreboard_left(10, 0), m_scoreboard_right(866, 0)
+    m_scoreboard_left(30, 0), m_scoreboard_right(850, 0)
 {}
 
 
