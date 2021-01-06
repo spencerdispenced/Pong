@@ -6,6 +6,8 @@
 #include "Paddle.h"
 #include "Scoreboard.h"
 
+
+
 class Pong
 {
 public:
@@ -42,4 +44,3 @@ private:
     void check_score();                                  // Updates score on side wall collision and checks if MAX_SCORE was reached.
     void end_game_message();
 };
-
