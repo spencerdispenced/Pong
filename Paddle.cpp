@@ -67,6 +67,8 @@ bool Paddle::check_state(SDL_Event const &event)
     return true;
 }
 
+
+
 void Paddle::move()
 {
     if (m_dir == Direction::UP)
