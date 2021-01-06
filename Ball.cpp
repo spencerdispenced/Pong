@@ -26,7 +26,6 @@ void Ball::reset()
 
     m_y_dir = DOWN; // Initial Direction doesn't matter since vel is 0, adjusted on collision
 
-
     // ball changes direction after scoring, default is RIGHT
     if (m_x_dir == Direction_x::RIGHT)
         m_x_dir = Direction_x::LEFT;
@@ -42,10 +41,8 @@ void Ball::init_audio()
     if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
         std::cerr << "Error Initilizing audio " << Mix_GetError() << std::endl;
 
-
     if (!(wall_sound = Mix_LoadWAV("Sounds/wall_hit.wav")))  // https://freesound.org/s/4360/
         std::cerr << "Error opening sound file: " << Mix_GetError() << std::endl;
-
 
     if (!(paddle_sound = Mix_LoadWAV("Sounds/paddle_hit.wav"))) // https://freesound.org/s/4391/
         std::cerr << "Error opening sound file: " << Mix_GetError() << std::endl;
@@ -163,4 +160,3 @@ void Ball::close()
     Mix_FreeChunk(score_sound);
     Mix_Quit();
 }
-
