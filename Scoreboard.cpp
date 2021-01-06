@@ -60,6 +60,7 @@ void Scoreboard::draw(SDL_Renderer* renderer, int win_score, int lose_score, std
 }
 
 
+
 void Scoreboard::close()
 {
     TTF_CloseFont(m_scorefont);
