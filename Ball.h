@@ -37,4 +37,3 @@ private:
     void init_audio();                          // Initilizes Mixer and loads audio files
     void play_sound(Mix_Chunk *sound);
 };
-
