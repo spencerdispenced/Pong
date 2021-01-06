@@ -111,8 +111,7 @@ void Pong::update()
     m_right_paddle.move();
 
     m_ball.move(); 
-    
-    
+       
     if (SDL_HasIntersection(&m_left_paddle.m_rect, &m_ball.m_position))
         check_collisions(m_left_paddle, m_ball);
 
@@ -125,23 +124,25 @@ void Pong::update()
 void Pong::check_collisions(Paddle &paddle, Ball &ball)
 {
     ball.change_direction_x(); // ball always gets reflected off paddle
-
     
     if (ball.m_position.y < (paddle.m_rect.y) + 20) // upper quarter of paddle 0-19
     {
         ball.m_y_dir = ball.UP;
         ball.update_velocity(5);
     }
+    
     else if (ball.m_position.y <= ((paddle.m_rect.y) + 20) && ball.m_position.y < (paddle.m_rect.y) + 50) // upper middle quarter 20-49
     {
         ball.m_y_dir = ball.UP;
         ball.update_velocity(2);
     }
+    
     else if (ball.m_position.y <= ((paddle.m_rect.y) + 50) && ball.m_position.y < (paddle.m_rect.y) + 80) // lower middle quarter 50-79
     {
         ball.m_y_dir = ball.DOWN;
         ball.update_velocity(2);
     }
+    
     else if (ball.m_position.y < ((paddle.m_rect.y) + 81) && ball.m_position.y < (paddle.m_rect.y) + paddle.PADDLE_HEIGHT) // lower quarter 80-100
     {
         ball.m_y_dir = ball.DOWN;
@@ -208,5 +209,3 @@ void Pong::close()
     m_scoreboard_right.close();
     SDL_Quit();
 }
-
-
