@@ -1,6 +1,6 @@
 # Pong
 
-Classic Pong game built using C++ with SDL, SDL_TTF, and SDL_Mixer libraries. 
+Classic Pong game built using C++ with SDL, SDL_TTF, and SDL_Mixer libraries. Screenshots can be viewed in the Pong_screenshots folder.
 
 # Controls
 Left side is controlled with 'w' and 'z' keys. 
