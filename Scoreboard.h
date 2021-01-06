@@ -19,7 +19,5 @@ private:
     SDL_Surface *m_surface;
     SDL_Texture *m_texture;
     SDL_Rect m_rect;
-
-
 };
 
