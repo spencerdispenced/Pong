@@ -22,4 +22,3 @@ private:
     Direction m_dir;
     Side m_side;
 };
-
